@@ -11,11 +11,11 @@ tailwind.config = {
     },
     extend: {
       colors: {
-        primary: "#191bfa",
+        primary: "#1356eb",
         // secondary: colors.red,
       },
       fontFamily: {
-        IRANSansX: "IRANSansX",
+        peyda: "Peyda",
       },
     },
   },
