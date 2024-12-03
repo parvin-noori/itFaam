@@ -1,0 +1,10 @@
+.sub-menu {
+  display: none;
+}
+@media (min-width: 992px) {
+  .menu-item-has-children:hover {
+    .sub-menu {
+      display: flex;
+    }
+  }
+}
