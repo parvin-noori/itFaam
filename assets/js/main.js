@@ -87,8 +87,10 @@ $(document).ready(function () {
 // ================================
 
 var customersSwiper = new Swiper(".customersSwiper", {
+  spaceBetween:50,
   scrollbar: {
     el: ".swiper-scrollbar",
     hide: true,
   },
+  
 });

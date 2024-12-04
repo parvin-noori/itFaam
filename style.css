@@ -1,4 +1,6 @@
-
+:root {
+  --bg-primary--: #1356eb;
+}
 .sub-menu {
   display: none;
 }
@@ -7,5 +9,45 @@
     .sub-menu {
       display: flex;
     }
+  }
+}
+.swiper-scrollbar-drag {
+  background-color: var(--bg-primary--);
+}
+
+.fade-start {
+  transform: translate3d(0, 0, 0);
+}
+
+.swiper-slide-active {
+  .fade-start {
+    animation-name: fade-start;
+    animation-duration: 1s;
+  }
+  .fade-end{
+    animation-name: fade-end;
+    animation-duration: 1s;
+  }
+}
+@keyframes fade-start {
+  0% {
+    /* left: 0; */
+    transform: translateX(-20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+@keyframes fade-end {
+  0% {
+    /* left: 0; */
+    transform: translateX(20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
   }
 }
