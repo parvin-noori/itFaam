@@ -10,7 +10,7 @@ $(document).ready(function () {
   });
 
   // ================================
-  // toggle azino drawer
+  // toggle  drawer
   // ================================
 
   const $overlay = $(".overlay");
@@ -22,9 +22,9 @@ $(document).ready(function () {
     show ? $overlay.toggleClass("show", show) : $overlay.toggleClass("show");
   }
 
-  // Helper function to toggle azino drawer visibility based on data-drawer value
+  // Helper function to toggle  drawer visibility based on data-drawer value
   function $toggleAzinoDrawer(drawerType, show) {
-    console.log(drawerType)
+    console.log(drawerType);
     const $uniqDrawer = $(`.drawer[data-drawer="${drawerType}"]`);
 
     if (drawerType) {
@@ -52,14 +52,13 @@ $(document).ready(function () {
     }
   }
 
-  // Function to close overlay and azino drawer when clicking outside the overlay
+  // Function to close overlay and  drawer when clicking outside the overlay
   function closeOverlayOnClickOutside(event) {
     if ($(event.target).is($overlay)) {
       $toggleOzinoOverlay(false);
       $toggleAzinoDrawer(false);
     }
   }
-
 
   if ($toggleDrawerBtn.length) {
     $toggleDrawerBtn.on("click", showOverlayAndAzinoDrawer);
@@ -81,4 +80,15 @@ $(document).ready(function () {
   if ($overlay.length) {
     $(window).on("click", closeOverlayOnClickOutside);
   }
+});
+
+// ================================
+// customersSwiper
+// ================================
+
+var customersSwiper = new Swiper(".customersSwiper", {
+  scrollbar: {
+    el: ".swiper-scrollbar",
+    hide: true,
+  },
 });
