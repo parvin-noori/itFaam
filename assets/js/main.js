@@ -92,5 +92,5 @@ var customersSwiper = new Swiper(".customersSwiper", {
     el: ".swiper-scrollbar",
     hide: true,
   },
-  
+  effect: 'fade'
 });
